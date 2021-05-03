@@ -1,0 +1,16 @@
+.pizza-meter-wrapper {
+  background-image: url("../../images/pizza.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+
+.completion-marker {
+  width: 0.5vw;
+  height: 101%;
+  transform-origin: bottom;
+  transform: rotate(45deg);
+}
