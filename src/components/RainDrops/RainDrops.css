@@ -1,0 +1,12 @@
+.rain-drops-wrapper {
+  --rain-drop-color: #aaf5e6;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.rain-drop {
+  background-color: var(--rain-drop-color);
+  position: absolute;
+  border-radius: 5px;
+}
