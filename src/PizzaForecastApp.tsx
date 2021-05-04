@@ -12,7 +12,9 @@ function PizzaForecastApp() {
         <div className="details">wabba labba dub dub</div>
       </div>
       {/* rain drops */}
-      <PizzaMeter percent={25} markerColor="red" />
+      <div className="pizza-meter-wrapper">
+        <PizzaMeter percent={75} markerExternalClasses={["pizza-meter-marker-color"]} />
+      </div>
     </div>
   );
 }

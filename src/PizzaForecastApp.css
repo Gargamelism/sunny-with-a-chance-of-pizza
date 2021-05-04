@@ -3,12 +3,6 @@
   --second-bg-color: black;
 }
 
-body {
-  height          : 100vh;
-  background-color: var(--main-bg-color);
-  background      : linear-gradient(0deg, var(--main-bg-color), var(--second-bg-color));
-}
-
 .logo {
   height  : 10px;
   position: absolute;
@@ -16,17 +10,35 @@ body {
   left    : 5px;
 }
 
-.forecast-wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  color: white;
-  padding: 2em;
+.pizza-forecasting-app {
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  height          : 100vh;
+  background-color: var(--main-bg-color);
+  background      : linear-gradient(0deg, var(--main-bg-color), var(--second-bg-color));
 }
 
-.forecast-wrapper > .header {
-  font-size: 2em;
+.forecast-wrapper {
+  height         : 100%;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: flex-start;
+  color          : white;
+  padding        : 2em;
+}
+
+.forecast-wrapper>.header {
+  font-size  : 2em;
   font-weight: bold;
+}
+
+.pizza-meter-wrapper {
+  width: 50vh;
+  height: 31vh;
+}
+
+.pizza-meter-marker-color {
+  background-color: #c93a55;
 }

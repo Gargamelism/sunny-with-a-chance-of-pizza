@@ -1,18 +1,30 @@
+import { useState, useEffect } from 'react';
+
 import './PizzaMeter.css';
 
 interface IPizzaMeterProps {
   percent: number;
-  markerColor: string;
+  markerExternalClasses: string[];
 }
 
-function PizzaMeter({ percent, markerColor = "red" }: IPizzaMeterProps) {
-  const pizzaStyles = {
-    backgroundColor: markerColor,
+function PizzaMeter({ percent, markerExternalClasses = [] }: IPizzaMeterProps) {
+  const [degree, setDegree] = useState(-90);
+
+  useEffect(() => {
+    setDegree(-45);
+  }, []);
+  
+  const markerDynamicStyle = {
+    opacity: `${percent}%`,
+    transform: `rotate(${degree}deg)`,
+    transition: 'transform 2s'
   };
+  
+  const markerClasses = ["completion-marker"].concat(markerExternalClasses).join(" ");
 
   return (
-    <div className="pizza-meter-wrapper">
-      <div className="completion-marker" style={pizzaStyles}></div>
+    <div className="pizza-img">
+      <div className={markerClasses} style={markerDynamicStyle}></div>
     </div>
   );
 }
