@@ -1,8 +1,6 @@
 
 async function getJSONRequest(url: string) {
-  if (process.env.NODE_ENV === 'development') {
-    url = process.env.REACT_APP_DEV_CORS_PROXY + url;
-  }
+  url = process.env.REACT_APP_CORS_PROXY + url;
 
   let parsedResponse = {};
 
