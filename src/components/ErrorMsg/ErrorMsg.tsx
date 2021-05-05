@@ -1,5 +1,3 @@
-// import { } from 'react';
-
 import './ErrorMsg.css';
 
 interface IErrorMsg {

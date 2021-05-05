@@ -1,7 +1,3 @@
-
-import { maxHeaderSize } from 'node:http';
-import { getMinutesToNextTime } from '../../utils/time';
-
 import './PizzaForecast.css';
 
 interface IPizzaForecast {

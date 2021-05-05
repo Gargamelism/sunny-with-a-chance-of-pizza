@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getJSONRequest } from './utils/network';
-import { calcPizzaChance } from './utils/pizzaForecast';
+import { calcPizzaChance } from './utils/general';
 import { getMinutesToNextTime } from './utils/time';
 
 import PizzaForecast from './components/PizzaForecast/PizzaForecast';

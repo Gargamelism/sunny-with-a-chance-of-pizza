@@ -6,7 +6,7 @@ import './PizzaMeter.css';
 
 interface IPizzaMeterProps {
   percent: number;
-  markerExternalClasses: string[];
+  markerExternalClasses?: string[];
 }
 
 function PizzaMeter({ percent, markerExternalClasses = [] }: IPizzaMeterProps) {
