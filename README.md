@@ -1,5 +1,7 @@
 # Sunny with a chance of pizza
 
+[Live Demo](https://ecstatic-pasteur-00f1ef.netlify.app/ "Sunny with a chance of pizza")
+
 ## Description
 Shows chances of team staying late and ordering pizza based on minutes left until pizza ordering time, and bugs open. \
 NOTE: Currently uses random number generator as not connected to bugs API.
