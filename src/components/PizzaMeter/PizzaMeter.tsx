@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import { convertRanges } from '../../utils/math';
+
 import './PizzaMeter.css';
 
 interface IPizzaMeterProps {
@@ -9,17 +11,22 @@ interface IPizzaMeterProps {
 
 function PizzaMeter({ percent, markerExternalClasses = [] }: IPizzaMeterProps) {
   const [degree, setDegree] = useState(-90);
+  const [opacity, setOpacity] = useState(40);
 
   useEffect(() => {
-    setDegree(-45);
-  }, []);
-  
+    const newDegree = convertRanges(percent, 0, 100, -89, 89);
+    setDegree(newDegree);
+
+    const newOpacity = convertRanges(percent, 0, 100, 40, 100);
+    setOpacity(newOpacity);
+  }, [percent]);
+
   const markerDynamicStyle = {
-    opacity: `${percent}%`,
+    opacity: `${opacity}%`,
     transform: `rotate(${degree}deg)`,
-    transition: 'transform 2s'
+    transition: 'transform 2s, opacity 1s'
   };
-  
+
   const markerClasses = ["completion-marker"].concat(markerExternalClasses).join(" ");
 
   return (

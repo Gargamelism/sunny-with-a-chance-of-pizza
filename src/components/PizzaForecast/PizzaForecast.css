@@ -1,0 +1,9 @@
+.header {
+  font-size  : 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.warning {
+  color: var(--error-color);
+}

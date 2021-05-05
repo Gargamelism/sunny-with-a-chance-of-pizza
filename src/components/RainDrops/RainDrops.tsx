@@ -1,4 +1,4 @@
-import generateRainDrops from './rainDropGenerator';
+import generateRainDrops from '../../utils/rainDropGenerator';
 import './RainDrops.css';
 
 interface IRainDropsProps {

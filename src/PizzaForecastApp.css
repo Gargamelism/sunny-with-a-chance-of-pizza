@@ -1,6 +1,7 @@
 :root {
   --main-bg-color  : #1261ff;
   --second-bg-color: black;
+  --error-color    : red;
 }
 
 .logo {
@@ -17,6 +18,7 @@
   height          : 100vh;
   background-color: var(--main-bg-color);
   background      : linear-gradient(0deg, var(--main-bg-color), var(--second-bg-color));
+  overflow: hidden;
 }
 
 .forecast-wrapper {
@@ -29,13 +31,8 @@
   padding        : 2em;
 }
 
-.forecast-wrapper>.header {
-  font-size  : 2em;
-  font-weight: bold;
-}
-
 .pizza-meter-wrapper {
-  width: 50vh;
+  width : 50vh;
   height: 31vh;
 }
 
