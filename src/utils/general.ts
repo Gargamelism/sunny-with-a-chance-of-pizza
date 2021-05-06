@@ -1,7 +1,7 @@
 
-function calcPizzaChance(bugsCount: number, minutesLeft: number): number {
-  // assuming each bug takes an average of 30 min
-  const bugsToTime = bugsCount * 30;
+function calcPizzaChance(bugsCount: number, teamSize: number, minutesLeft: number): number {
+  // assuming each bug takes an average of 60 min
+  const bugsToTime = (bugsCount * 60) / teamSize;
   // will the time left suffice to complete them all?
   const chance = Math.round((bugsToTime / minutesLeft) * 100);
 

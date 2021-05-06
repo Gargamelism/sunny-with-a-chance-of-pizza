@@ -28,7 +28,7 @@ function PizzaForecastApp() {
           const newMinutesLeft = getMinutesToNextTime(process.env.REACT_APP_PIZZA_TIME!);
           setMinutesLeft(newMinutesLeft);
 
-          const newPizzaChance = calcPizzaChance(bugsCount['0'], newMinutesLeft);
+          const newPizzaChance = calcPizzaChance(bugsCount['0'], parseInt(process.env.REACT_APP_TEAM_SIZE!), newMinutesLeft);
           setPizzaChance(newPizzaChance);
         } else {
           setError(true);
